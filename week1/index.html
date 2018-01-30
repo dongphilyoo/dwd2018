@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *,
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            display: inline-block;
+            float: left;
+            line-height: 16px;
+        }
+
+        a:visited {
+            color: turquoise;
+        }
+
+        a:hover {
+            color: turquoise;
+        }
+
+        a:active {
+            color: turquoise;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+    </div>
+
+    <script>
+        var w = window.innerWidth;
+        var h = window.innerHeight;
+        console.log(w);
+        console.log(h);
+
+        function dotMkr() {
+            let t = w * h;
+            let a = 16 * 16;
+            console.log(t);
+            for (let i = 0; i < t / a; i++) {
+                let node = document.createElement("A");
+                node.setAttribute("href", "#" + i);
+                node.innerHTML = "▓";
+
+                document.getElementById("wrapper").appendChild(node);
+            }
+        }
+        dotMkr();
+
+    </script>
+</body>
+
+</html>
