@@ -12,7 +12,7 @@ app.listen(3000, function () {
 //Of course a route can be for any "path", here is an example for "/somethingelse":
 
 app.get('/somethingelse', function (req, res) {
-  res.send('Hello World!');
+  res.send('Good Bye!');
 });
 
 // git remote sync test
