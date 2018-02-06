@@ -12,6 +12,11 @@ var thesubmissions = [];
 
 //const opn = require('opn');
 
+open('http://www.google.com', function (err) {
+    if (err) throw err;
+});
+
+
 app.get('/formpost', function (req, res) {
     //res.send("You submitted " + req.query.textfield);
     thesubmissions.push(req.query.textfield);
@@ -27,9 +32,7 @@ app.get('/formpost', function (req, res) {
     //    res.send(require("openurl").open("http://www.google.com"));
 
     //    res.send(opn('http://www.google.com'));
-    open('http://www.google.com', function (err) {
-        if (err) throw err;
-    });
+
 
 
 });
