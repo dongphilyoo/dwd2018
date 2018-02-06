@@ -33,10 +33,10 @@ app.get('/formpost', function(req, res) {
 });
 
 app.get('/display', function(req, res) {
-  var htmlout = "<html><body style='background-color:yellow;'>";
+  var htmlout = "<html><body style='background-color:#FFFF00;'>";
   for (var i = 0; i < thesubmissions.length; i++) {
       var ref = thesubmissions[i].replace(/\s/g,'').toLowerCase();
-    htmlout = htmlout + "<a class='links' href='http://www." + ref + ".com'>" + thesubmissions[i] + "<br>";
+    htmlout = htmlout + "<a class='links' href='http://www." + ref + ".com' style='font-weight:bold'>" + thesubmissions[i] + "<br>";
   }
   var htmlout = htmlout + "</body></html>";
   res.send(htmlout);
