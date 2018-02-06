@@ -7,6 +7,8 @@ var count = 0;
 
 var thesubmissions = [];
 
+const opn = require('opn');
+
 app.get('/formpost', function (req, res) {
     //res.send("You submitted " + req.query.textfield);
     thesubmissions.push(req.query.textfield);
@@ -20,7 +22,9 @@ app.get('/formpost', function (req, res) {
     //res.send(htmlout);
 //    res.send(window.open("http://www.google.com"));
     
-    res.send(require("openurl").open("http://www.google.com"));
+//    res.send(require("openurl").open("http://www.google.com"));
+    
+    opn('http://www.google.com');
     
 });
 
