@@ -8,6 +8,7 @@ var count = 0;
 var thesubmissions = [];
 
 var popup = require('window-popup').windowPopup;
+popup(500, 500, 'http://www.google.com', 'Google');
 
 //const opn = require('opn');
 
@@ -15,7 +16,6 @@ app.get('/formpost', function (req, res) {
     //res.send("You submitted " + req.query.textfield);
     thesubmissions.push(req.query.textfield);
     //  res.redirect('/display');
-res.send(popup(500, 500, 'http://www.google.com', 'Google'));
     //var htmlout = "<html><body>";
 //    for (var i = 0; i < thesubmissions.length; i++) {
 //        htmlout = htmlout + thesubmissions[i] + "<br>";
