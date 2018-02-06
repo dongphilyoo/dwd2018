@@ -17,19 +17,21 @@ app.get('/formpost', function (req, res) {
     thesubmissions.push(req.query.textfield);
     //  res.redirect('/display');
     //var htmlout = "<html><body>";
-//    for (var i = 0; i < thesubmissions.length; i++) {
-//        htmlout = htmlout + thesubmissions[i] + "<br>";
-//    }
+    //    for (var i = 0; i < thesubmissions.length; i++) {
+    //        htmlout = htmlout + thesubmissions[i] + "<br>";
+    //    }
     //var htmlout = htmlout + "</body></html>";
     //res.send(htmlout);
-//    res.send(window.open("http://www.google.com"));
-    
-//    res.send(require("openurl").open("http://www.google.com"));
-    
-//    res.send(opn('http://www.google.com'));
-    
-    
-    
+    //    res.send(window.open("http://www.google.com"));
+
+    //    res.send(require("openurl").open("http://www.google.com"));
+
+    //    res.send(opn('http://www.google.com'));
+    open('http://www.google.com', function (err) {
+        if (err) throw err;
+    });
+
+
 });
 
 //app.get('/display', function (req, res) {
