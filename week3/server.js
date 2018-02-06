@@ -3,6 +3,8 @@ var app = express();
 
 app.use(express.static('public'));
 
+var thesubmissions = [];
+
 app.get('/formpost', function (req, res) {
     thesubmissions.push(req.query.textfield);
     res.redirect('/undecided');
