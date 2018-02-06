@@ -1,21 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>DWD</title>
     <style>
-        body{background-color: darkgrey;}
-        input{
-            border: 3px solid red;
-            outline:none;
+        body {
+            background-color: darkgrey;
         }
-        #btn{display: none;}
-        
+
+        #box {
+            width: 30%;
+            height: 130px;
+            font-size: 3rem;
+            font-weight: bold;
+            border: 3px solid red;
+            outline: none;
+        }
+
+        #btn {
+            display: none;
+        }
+
     </style>
 </head>
+
 <body>
     <form method="GET" action="/formpost">
-        <input id="box" type="text" name="textfield" placeholder="Type Something"/>
+        <input id="box" type="text" name="textfield" placeholder="Type Something" />
         <input id="btn" type="submit" name="submitbutton" value="Submit" />
     </form>
     <script>
@@ -25,4 +37,5 @@
 
     </script>
 </body>
+
 </html>
