@@ -9,12 +9,14 @@
             border: 3px solid red;
             outline:none;
         }
+        #btn{display: none;}
+        
     </style>
 </head>
 <body>
     <form method="GET" action="/formpost">
         <input id="box" type="text" name="textfield" placeholder="Type Something"/>
-        <input type="submit" name="submitbutton" value="Submit" />
+        <input id="btn" type="submit" name="submitbutton" value="Submit" />
     </form>
     <script>
         window.onload = function() {
