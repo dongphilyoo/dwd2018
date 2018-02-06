@@ -27,7 +27,7 @@ app.get('/formpost', function(req, res) {
     htmlout = htmlout + thesubmissions[i] + "<br>";
   }
   var htmlout = htmlout + "</body></html>";
-  res.render(htmlout);
+  res.send(htmlout);
     
     
 //  res.redirect('/templatetest');
