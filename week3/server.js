@@ -19,6 +19,7 @@ app.get('/formpost', function(req, res) {
   //res.send("You submitted " + req.query.textfield);
   thesubmissions.push(req.query.textfield);
     console.log(thesubmissions);
+    res.render('template.ejs', thesubmissions);
 //  res.redirect('/display');
   //res.redirect('/templatetest');
 });
