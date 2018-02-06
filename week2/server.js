@@ -7,8 +7,8 @@ var count = 0;
 
 var thesubmissions = [];
 
-var popup = require('window-popup').windowPopup;
-popup(500, 500, 'http://www.google.com', 'Google');
+//var popup = require('window-popup').windowPopup;
+//popup(500, 500, 'http://www.google.com', 'Google');
 
 //const opn = require('opn');
 
