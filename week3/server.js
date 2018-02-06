@@ -33,7 +33,7 @@ app.get('/formpost', function(req, res) {
 });
 
 app.get('/display', function(req, res) {
-  var htmlout = "<html><body>";
+  var htmlout = "<html><body style='background-color:yellow;'>";
   for (var i = 0; i < thesubmissions.length; i++) {
       var ref = thesubmissions[i].replace(/\s/g,'').toLowerCase();
     htmlout = htmlout + "<a class='links' href='http://www." + ref + ".com'>" + thesubmissions[i] + "<br>";
