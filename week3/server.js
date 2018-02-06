@@ -29,7 +29,7 @@ app.get('/formpost', function(req, res) {
     
     
     
-  res.redirect('/templatetest');
+  //res.redirect('/templatetest');
 });
 
 app.get('/display', function(req, res) {
