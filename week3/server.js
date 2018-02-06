@@ -25,17 +25,17 @@ app.get('/formpost', function(req, res) {
   //res.send("You submitted " + req.query.textfield);
   thesubmissions.push(req.query.textfield);
     //console.log(thesubmissions);
-  res.redirect('/display');
+//  res.redirect('/display');
     
     
     
-  //res.redirect('/templatetest');
+  res.redirect('/test.html');
 });
 
 app.get('/display', function(req, res) {
   var htmlout = "<html><body>";
   for (var i = 0; i < thesubmissions.length; i++) {
-    htmlout = htmlout + "<a href='www." + thesubmissions[i] + ".com'>" + thesubmissions[i] + "<br>";
+    htmlout = htmlout + "<a class='links' href='www." + thesubmissions[i] + ".com'>" + thesubmissions[i] + "<br>";
   }
   var htmlout = htmlout + "</body></html>";
   res.send(htmlout);
