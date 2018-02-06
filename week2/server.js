@@ -12,14 +12,14 @@ var thesubmissions = [];
 
 //const opn = require('opn');
 
-open('http://www.google.com', function (err) {
-    if (err) throw err;
-});
+//open('http://www.google.com', function (err) {
+//    if (err) throw err;
+//});
 
 
 app.get('/formpost', function (req, res) {
-    //res.send("You submitted " + req.query.textfield);
-    thesubmissions.push(req.query.textfield);
+    res.send("You submitted " + req.query.textfield);
+//    thesubmissions.push(req.query.textfield);
     //  res.redirect('/display');
     //var htmlout = "<html><body>";
     //    for (var i = 0; i < thesubmissions.length; i++) {
