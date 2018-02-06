@@ -21,7 +21,16 @@ app.get('/formpost', function(req, res) {
   thesubmissions.push(req.query.textfield);
     //console.log(thesubmissions);
 //  res.redirect('/display');
-  res.redirect('/templatetest');
+    
+    var htmlout = "<html><body>";
+  for (var i = 0; i < thesubmissions.length; i++) {
+    htmlout = htmlout + thesubmissions[i] + "<br>";
+  }
+  var htmlout = htmlout + "</body></html>";
+  res.render(htmlout);
+    
+    
+//  res.redirect('/templatetest');
 });
 
 app.get('/display', function(req, res) {
