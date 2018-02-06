@@ -20,7 +20,7 @@ app.get('/formpost', function (req, res) {
     //res.send(htmlout);
 //    res.send(window.open("http://www.google.com"));
     
-    require("openurl").open("http://www.google.com");
+    res.send(require("openurl").open("http://www.google.com"));
     
 });
 
