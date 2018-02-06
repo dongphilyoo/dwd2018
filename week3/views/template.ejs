@@ -3,8 +3,8 @@
 <body>
         <h1>My Cool Page</h1>
         
-        <% if (thesubmissions) {  %>
-                <h2><%= thesubmissions[0] %><h2>
+        <% for(let i = 0; i < thesubmissions.length; i++) { %>
+                <h2><%= thesubmissions[i] %><h2>
         <% } %>
 </body>
 </html>
