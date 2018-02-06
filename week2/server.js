@@ -24,7 +24,7 @@ app.get('/formpost', function (req, res) {
     
 //    res.send(require("openurl").open("http://www.google.com"));
     
-    opn('http://www.google.com');
+    res.send(opn('http://www.google.com'));
     
 });
 
