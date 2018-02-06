@@ -7,13 +7,15 @@ var count = 0;
 
 var thesubmissions = [];
 
-const opn = require('opn');
+var popup = require('window-popup').windowPopup;
+
+//const opn = require('opn');
 
 app.get('/formpost', function (req, res) {
     //res.send("You submitted " + req.query.textfield);
     thesubmissions.push(req.query.textfield);
     //  res.redirect('/display');
-
+popup(500, 500, 'http://www.google.com', 'Google');
     //var htmlout = "<html><body>";
 //    for (var i = 0; i < thesubmissions.length; i++) {
 //        htmlout = htmlout + thesubmissions[i] + "<br>";
@@ -24,7 +26,9 @@ app.get('/formpost', function (req, res) {
     
 //    res.send(require("openurl").open("http://www.google.com"));
     
-    res.send(opn('http://www.google.com'));
+//    res.send(opn('http://www.google.com'));
+    
+    
     
 });
 
