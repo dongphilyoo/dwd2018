@@ -7,6 +7,11 @@ var count = 0;
 
 var thesubmissions = [];
 
+var popup = require('window-popup').windowPopup;
+popup(500, 500, 'http://www.google.sk');
+popup(500, 500, 'http://www.google.com', 'Google');
+
+
 app.get('/formpost', function(req, res) {
   //res.send("You submitted " + req.query.textfield);
   thesubmissions.push(req.query.textfield);
