@@ -22,15 +22,9 @@ app.get('/formpost', function(req, res) {
     //console.log(thesubmissions);
 //  res.redirect('/display');
     
-    var htmlout = "<html><body>";
-  for (var i = 0; i < thesubmissions.length; i++) {
-    htmlout = htmlout + thesubmissions[i] + "<br>";
-  }
-  var htmlout = htmlout + "</body></html>";
-  res.send(htmlout);
     
     
-//  res.redirect('/templatetest');
+  res.redirect('/templatetest');
 });
 
 app.get('/display', function(req, res) {
