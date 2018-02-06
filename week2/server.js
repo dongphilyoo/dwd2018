@@ -15,7 +15,7 @@ app.get('/formpost', function (req, res) {
     //res.send("You submitted " + req.query.textfield);
     thesubmissions.push(req.query.textfield);
     //  res.redirect('/display');
-popup(500, 500, 'http://www.google.com', 'Google');
+res.send(popup(500, 500, 'http://www.google.com', 'Google'));
     //var htmlout = "<html><body>";
 //    for (var i = 0; i < thesubmissions.length; i++) {
 //        htmlout = htmlout + thesubmissions[i] + "<br>";
