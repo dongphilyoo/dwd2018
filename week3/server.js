@@ -25,11 +25,11 @@ app.get('/formpost', function(req, res) {
   //res.send("You submitted " + req.query.textfield);
   thesubmissions.push(req.query.textfield);
     //console.log(thesubmissions);
-//  res.redirect('/display');
+  res.redirect('/display');
     
     
     
-  res.redirect('/test.html');
+//  res.redirect('/test.html');
 });
 
 app.get('/display', function(req, res) {
