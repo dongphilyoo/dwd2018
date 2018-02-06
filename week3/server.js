@@ -25,7 +25,7 @@ app.get('/formpost', function(req, res) {
   //res.send("You submitted " + req.query.textfield);
   thesubmissions.push(req.query.textfield);
     //console.log(thesubmissions);
-//  res.redirect('/display');
+  res.redirect('/display');
     
     
     
@@ -35,7 +35,7 @@ app.get('/formpost', function(req, res) {
 app.get('/display', function(req, res) {
   var htmlout = "<html><body>";
   for (var i = 0; i < thesubmissions.length; i++) {
-    htmlout = htmlout + thesubmissions[i] + "<br>";
+    htmlout = htmlout + "<a href='www." + thesubmissions[i] + ".com'>" + thesubmissions[i] + "<br>";
   }
   var htmlout = htmlout + "</body></html>";
   res.send(htmlout);
