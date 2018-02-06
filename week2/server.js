@@ -10,7 +10,8 @@ var thesubmissions = [];
 app.get('/formpost', function(req, res) {
   //res.send("You submitted " + req.query.textfield);
   thesubmissions.push(req.query.textfield);
-  res.redirect('/display');
+//  res.redirect('/display');
+    
 });
 
 app.get('/display', function(req, res) {
