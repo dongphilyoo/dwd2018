@@ -35,8 +35,8 @@ app.get('/formpost', function(req, res) {
 app.get('/display', function(req, res) {
   var htmlout = "<html><body>";
   for (var i = 0; i < thesubmissions.length; i++) {
-      thesubmissions[i].replace(/\s/g,'');
-    htmlout = htmlout + "<a class='links' href='http://www." + thesubmissions[i] + ".com'>" + thesubmissions[i] + "<br>";
+      var ref = thesubmissions[i].replace(/\s/g,'');
+    htmlout = htmlout + "<a class='links' href='http://www." + ref + ".com'>" + ref + "<br>";
   }
   var htmlout = htmlout + "</body></html>";
   res.send(htmlout);
