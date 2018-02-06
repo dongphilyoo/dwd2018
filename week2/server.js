@@ -18,7 +18,10 @@ app.get('/formpost', function (req, res) {
 //    }
     //var htmlout = htmlout + "</body></html>";
     //res.send(htmlout);
-    res.send(window.open("http://www.google.com"));
+//    res.send(window.open("http://www.google.com"));
+    
+    require("openurl").open("http://www.google.com");
+    
 });
 
 //app.get('/display', function (req, res) {
