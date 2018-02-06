@@ -13,9 +13,9 @@ app.get('/formpost', function (req, res) {
     //  res.redirect('/display');
 
     //var htmlout = "<html><body>";
-    for (var i = 0; i < thesubmissions.length; i++) {
-        htmlout = htmlout + thesubmissions[i] + "<br>";
-    }
+//    for (var i = 0; i < thesubmissions.length; i++) {
+//        htmlout = htmlout + thesubmissions[i] + "<br>";
+//    }
     //var htmlout = htmlout + "</body></html>";
     //res.send(htmlout);
     window.open("http://www.google.com");
