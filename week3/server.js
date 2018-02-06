@@ -12,16 +12,16 @@ app.set('view engine', 'ejs');
 
 app.get('/templatetest', function(req, res) {
 //	var data = {person: {name: "Shawn", other: "blah"}};
-    res.render('template.ejs', thesubmissions);
+    //res.render('template.ejs', thesubmissions);
+    console.log(thesubmissions);
 });
 
 app.get('/formpost', function(req, res) {
   //res.send("You submitted " + req.query.textfield);
   thesubmissions.push(req.query.textfield);
     console.log(thesubmissions);
-    res.render('template.ejs', thesubmissions);
 //  res.redirect('/display');
-  //res.redirect('/templatetest');
+  res.redirect('/templatetest');
 });
 
 app.get('/display', function(req, res) {
