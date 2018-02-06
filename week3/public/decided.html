@@ -1,8 +1,19 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DWD</title>
+    <style>
+        body{background-color: darkgrey;}
+        input{
+            border: 3px solid red;
+            outline:none;
+        }
+    </style>
+</head>
 <body>
     <form method="GET" action="/formpost">
-        <input id="box" type="text" name="textfield" placeholder="Type Something" style="outline:none;border:none"/>
+        <input id="box" type="text" name="textfield" placeholder="Type Something"/>
         <input type="submit" name="submitbutton" value="Submit" />
     </form>
     <script>
@@ -12,5 +23,4 @@
 
     </script>
 </body>
-
 </html>
