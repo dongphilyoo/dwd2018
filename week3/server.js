@@ -36,7 +36,7 @@ app.get('/display', function(req, res) {
   var htmlout = "<html><body>";
   for (var i = 0; i < thesubmissions.length; i++) {
       var ref = thesubmissions[i].replace(/\s/g,'').toLowerCase();
-    htmlout = htmlout + "<a class='links' href='http://www." + ref + ".com'>" + ref + "<br>";
+    htmlout = htmlout + "<a class='links' href='http://www." + ref + ".com'>" + thesubmissions[i] + "<br>";
   }
   var htmlout = htmlout + "</body></html>";
   res.send(htmlout);
