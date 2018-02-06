@@ -1,0 +1,18 @@
+<html>
+
+<body>
+    <form method="GET" action="/formpost">
+        <input type="text" name="textfield" value="Search.." />
+        <input type="submit" name="submitbutton" value="Search" />
+    </form>
+
+    <% if (submissions) {  %>
+        <h2>
+            <%= submissions[0] %>
+                </h2>
+                    
+                    <% } %>
+                       
+</body>
+
+</html>
