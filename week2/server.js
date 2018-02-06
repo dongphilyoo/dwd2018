@@ -7,7 +7,7 @@ app.set('view engine', 'ejs');
 
 var count = 0;
 
-var thesubmissions = [];
+//var thesubmissions = [];
 
 //var popup = require('window-popup').windowPopup;
 //popup(500, 500, 'http://www.google.com', 'Google');
@@ -21,14 +21,18 @@ var thesubmissions = [];
 
 app.get('/formpost', function (req, res) {
 //    res.send("You submitted " + req.query.textfield);
+var thesubmissions = [];
+    
     thesubmissions.push(req.query.textfield);
-      res.redirect('/display');
+    res.render('form.ejs', thesubmissions);
+    
+//      res.redirect('/display');
 //    res.render('form.ejs', thesubmissions);
    
 });
 
-app.get('/display', function (req, res) {
-    res.render('form.ejs', thesubmissions);
+//app.get('/display', function (req, res) {
+//    res.render('form.ejs', thesubmissions);
 
 //    var htmlout = "<html><body>";
 //    for (var i = 0; i < thesubmissions.length; i++) {
@@ -36,7 +40,7 @@ app.get('/display', function (req, res) {
 //    }
 //    var htmlout = htmlout + "</body></html>";
 //    res.send(htmlout);
-});
+//});
 //
 //app.get('/count', function (req, res) {
 //    count++;
