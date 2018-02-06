@@ -36,7 +36,7 @@ app.get('/display', function (req, res) {
     var htmlout = "<html><body style='background-color:#FFFF00;'>";
     for (var i = 0; i < thesubmissions.length; i++) {
         var ref = thesubmissions[i].replace(/\s/g, '').toLowerCase();
-        htmlout = htmlout + "<a href='http://www." + ref + ".com' style='color:#333;font-weight:bold;font-size:3.2rem;margin:2%;display:inline-block;'>" + thesubmissions[i] + "<br>";
+        htmlout = htmlout + "<a href='http://www." + ref + ".com' style='color:#0025d8;font-weight:bold;font-size:3.2rem;margin:2%;display:inline-block;'>" + thesubmissions[i] + "<br>";
     }
     var htmlout = htmlout + "</body></html>";
     res.send(htmlout);
