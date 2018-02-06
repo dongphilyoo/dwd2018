@@ -12,7 +12,12 @@ app.set('view engine', 'ejs');
 
 app.get('/templatetest', function(req, res) {
 //	var data = {person: {name: "Shawn", other: "blah"}};
-    res.render('template.ejs', thesubmissions);
+        var data = [];
+
+    for(var i=0;i<thesubmissions.length;i++){
+        data.push(thesubmissions[i]);
+    }
+    res.render('template.ejs', data);
     //console.log(thesubmissions);
 });
 
