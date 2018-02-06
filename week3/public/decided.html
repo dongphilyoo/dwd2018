@@ -1,8 +1,16 @@
 <html>
-  <body>
+
+<body>
     <form method="GET" action="/formpost">
-      <input type="text" name="textfield" placeholder="Type Something" />
-      <input type="submit" name="submitbutton" value="Submit" />
+        <input id="box" type="text" name="textfield" placeholder="Type Something" />
+        <input type="submit" name="submitbutton" value="Submit" />
     </form>
-    </body>
+    <script>
+        window.onload = function() {
+            document.getElementById("box").focus();
+        };
+
+    </script>
+</body>
+
 </html>
