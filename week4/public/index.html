@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DWD</title>
+    <style>
+        body {
+            background-color: darkgrey;
+        }
+
+        form {
+            margin-top: 20%;
+            text-align: center;
+        }
+
+        #box {
+            width: 30%;
+            height: 130px;
+            font-size: 3rem;
+            font-weight: bold;
+            border: 3px solid red;
+            outline: none;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        #btn {
+            display: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <form method="GET" action="/formpost">
+        <input id="box" type="text" name="textfield" placeholder="Type Something" />
+        <input id="btn" type="submit" name="submitbutton" value="Submit" />
+    </form>
+    <script>
+        window.onload = function() {
+            document.getElementById("box").focus();
+        };
+
+    </script>
+</body>
+
+</html>
