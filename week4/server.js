@@ -37,7 +37,7 @@ app.get('/formpost', function (req, res) {
 
 app.get('/undecided', function(req, res) {
 
-  db.thesubmissions.find({}, function(err, saved) {
+  db.undecided.find({}, function(err, saved) {
     if (err || !saved) {
     	console.log("No results");
     }
