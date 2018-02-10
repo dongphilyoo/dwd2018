@@ -16,7 +16,7 @@ app.get('/formpost', function (req, res) {
 //    thesubmissions.push(req.query.textfield);
 //    res.redirect('/undecided');
     
-    db.thesubmissions.save({"submission":req.query.textfield}, function(err, saved) {
+    db.undecided.save({"submission":req.query.textfield}, function(err, saved) {
     if( err || !saved ) console.log("Not saved");
       else console.log("Saved");
   });
