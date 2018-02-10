@@ -20,7 +20,7 @@
     
     <% for (var i = 0; i < thedata.length; i++) { %>
      <% var undecided = thedata[i].submission.replace(/\s/g, '').toLowerCase(); %>
-      <a href="http://www.<%= thedata[i].submission %>.com"><%= thedata[i].submission %> </a><br />
+      <a href="http://www.<%= undecided %>.com"><%= thedata[i].submission %> </a><br />
     <!--JSON.stringify(thedata[i])-->
     <% } %>
 
