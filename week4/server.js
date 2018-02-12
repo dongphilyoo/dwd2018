@@ -1,11 +1,12 @@
 //mongodb://<dbuser>:<dbpassword>@ds125628.mlab.com:25628/dwd-spring2018
 
+var config = require('./config.js');
 var mongojs = require('mongojs');
 
 var express = require('express');
 var app = express();
 
-var db = mongojs("dongphilyoo:dwd2018@ds125628.mlab.com:25628/dwd-spring2018", ["undecided"])
+var db = mongojs(config.mlabstring, ["undecided"])
 
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
