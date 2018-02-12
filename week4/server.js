@@ -1,6 +1,6 @@
 //mongodb://<dbuser>:<dbpassword>@ds125628.mlab.com:25628/dwd-spring2018
 
-var config = require('./config.js');
+var config = require('config.js');
 var mongojs = require('mongojs');
 
 var express = require('express');
