@@ -1,7 +1,7 @@
 //mongodb://<dbuser>:<dbpassword>@ds125628.mlab.com:25628/dwd-spring2018
 
 var config = require('./config.js');
-console.log(config.kkk);
+console.log(JSON.stringify(config));
 var mongojs = require('mongojs');
 
 var express = require('express');
