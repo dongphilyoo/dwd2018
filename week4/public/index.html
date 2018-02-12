@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <title>이게 뭐냐고? 나도 몰라</title>
     <style>
+        *,html,body{margin:0;padding:0;}
         body {
-            background-image: url("bg.jpg");
+/*            background-image: url("bg.jpg");*/
             background-color: darkgrey;
         }
 
+        img{width: 100%;height:auto;}
         form {
             margin-top: 20%;
             text-align: center;
@@ -34,6 +36,7 @@
 </head>
 
 <body>
+   <img src="bg.jpg" alt="">
     <form method="GET" action="/formpost">
         <input id="box" type="text" name="textfield" placeholder="Type Something" />
         <input id="btn" type="submit" name="submitbutton" value="Submit" />
