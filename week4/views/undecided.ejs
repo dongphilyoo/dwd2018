@@ -1,30 +1,46 @@
 <html>
-  <head>
+
+<head>
     <title>Some Template</title>
     <style>
-        body{background-color: #FFFF00;}
-        a{color:#0025d8;font-weight:bold;font-size:3.2rem;margin:20px 8%;display:inline-block;}
+        body {
+            background-color: #FFFF00;
+        }
+
+        a {
+            color: #0025d8;
+            font-weight: bold;
+            font-size: 3.2rem;
+            margin: 20px 8%;
+            display: inline-block;
+            float: left;
+        }
+
     </style>
     <script type="text/javascript">
-      function setup() {
-        var datafromserver = "<%=thedata%>";
-        //alert(datafromserver);
-      }
+        function setup() {
+            var datafromserver = "<%=thedata%>";
+            //alert(datafromserver);
+        }
 
-      window.addEventListener('load', setup);
+        window.addEventListener('load', setup);
 
     </script>
 
-  </head>
-  <body>
-    
-    <% for (var i = 0; i < thedata.length; i++) { %>
-     <% var undecided = thedata[i].submission.replace(/\s/g, '').toLowerCase(); %>
-      <a href="http://www.<%= undecided %>.com"><%= thedata[i].submission %> </a><br />
-    <!--JSON.stringify(thedata[i])-->
-    <% } %>
+</head>
 
-  </body>
+<body>
+
+    <% for (var i = 0; i < thedata.length; i++) { %>
+        <% var undecided = thedata[i].submission.replace(/\s/g, '').toLowerCase(); %>
+            <a href="http://www.<%= undecided %>.com">
+                <%= thedata[i].submission %>
+            </a><br />
+            <!--JSON.stringify(thedata[i])-->
+            <% } %>
+
+</body>
+
 </html>
 
 
