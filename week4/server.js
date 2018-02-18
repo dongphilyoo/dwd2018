@@ -46,7 +46,7 @@ app.get('/undecided', function(req, res) {
     	console.log("No results");
     }
     else {
-      //console.log(saved);
+      console.log(saved);
       //res.render('undecided.ejs', {thedata:saved});
 
     	// saved.forEach(function(record) {
