@@ -58,15 +58,23 @@
         };
 
         $(document).ready(function() {
+//            $.ajax({
+//                url: "./undecided",
+//                dataType: 'json',
+//                success: function(data) {
+//                    alert("Temperature is: " + );
+//                },
+//                error: function() {
+//                    alert("error");
+//                }
+//            });
             $.ajax({
-                url: "./undecided",
-                dataType: 'json',
-                success: function(data) {
-                    alert("Temperature is: " + data.main.temp);
-                },
-                error: function() {
-                    alert("error");
-                }
+              url: "/undecided",
+              type: 'get',
+              //data: {objectstate: JSON.stringify(objectstate)}
+            }).done(function(data) {
+              console.log('data from server', data)
+
             });
         });
 

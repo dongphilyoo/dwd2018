@@ -47,7 +47,7 @@ app.get('/undecided', function(req, res) {
     }
     else {
       console.log(saved);
-      res.render('undecided.ejs', {thedata:saved});
+      //res.render('undecided.ejs', {thedata:saved});
 
     	// saved.forEach(function(record) {
       // 	console.log(record);
