@@ -5,13 +5,23 @@
     <meta charset="UTF-8">
     <title>이게 뭐냐고? 나도 몰라</title>
     <style>
-        *,html,body{margin:0;padding:0;}
+        *,
+        html,
         body {
-/*            background-image: url("bg.jpg");*/
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            /*            background-image: url("bg.jpg");*/
             background-color: darkgrey;
         }
 
-        img{width: 100%;height:auto;}
+        img {
+            width: 100%;
+            height: auto;
+        }
+
         form {
             margin-top: 20%;
             text-align: center;
@@ -33,10 +43,11 @@
         }
 
     </style>
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
 </head>
 
 <body>
-   <img src="bg.jpg" alt="">
+    <img src="bg.jpg" alt="">
     <form method="GET" action="/formpost">
         <input id="box" type="text" name="textfield" placeholder="Type Something" />
         <input id="btn" type="submit" name="submitbutton" value="Submit" />
@@ -45,6 +56,19 @@
         window.onload = function() {
             document.getElementById("box").focus();
         };
+
+        $(document).ready(function() {
+            $.ajax({
+                url: "./undecided",
+                dataType: 'json',
+                success: function(data) {
+                    alert("Temperature is: " + data.main.temp);
+                },
+                error: function() {
+                    alert("error");
+                }
+            });
+        });
 
     </script>
 </body>

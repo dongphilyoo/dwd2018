@@ -25,7 +25,7 @@ app.get('/formpost', function (req, res) {
       else console.log("Saved");
   });
 
-  res.redirect('/undecided');
+  //res.redirect('/undecided');
 });
 
 //app.get('/undecided', function (req, res) {
