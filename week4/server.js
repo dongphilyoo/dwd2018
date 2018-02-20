@@ -48,8 +48,8 @@ app.get('/undecided', function(req, res) {
     else {
       console.log(saved);
         var jj = JSON.stringify(saved);
-        console.log(jj);
-        console.log(jj[2].submission);
+        console.log(saved[1].submission);
+        
       //res.render('undecided.ejs', {thedata:saved});
 
     	// saved.forEach(function(record) {
