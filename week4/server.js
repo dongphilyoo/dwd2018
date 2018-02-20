@@ -46,9 +46,9 @@ app.get('/undecided', function(req, res) {
     	console.log("No results");
     }
     else {
-      console.log(saved);
+      //console.log(saved);
         var jj = JSON.stringify(saved);
-        console.log(saved[1].submission);
+        //console.log(saved[1].submission);
         
       //res.render('undecided.ejs', {thedata:saved});
 
