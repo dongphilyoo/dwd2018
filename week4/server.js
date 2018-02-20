@@ -49,6 +49,7 @@ app.get('/undecided', function(req, res) {
       console.log(saved);
         var jj = JSON.stringify(saved);
         console.log(jj);
+        console.log(jj[2].submission);
       //res.render('undecided.ejs', {thedata:saved});
 
     	// saved.forEach(function(record) {
