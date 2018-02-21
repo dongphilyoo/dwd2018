@@ -50,7 +50,8 @@
     <img src="bg.jpg" alt="">
     <form method="GET" action="/formpost">
         <input id="box" type="text" name="textfield" placeholder="Type Something" />
-        <input id="btn" type="submit" name="submitbutton" value="Submit" />
+        <!--        <input id="btn" type="submit" name="submitbutton" value="Submit" />-->
+        <input id="submit" type="button" name="submitbutton" value="Submit" />
     </form>
     <script>
         window.onload = function() {
@@ -58,24 +59,46 @@
         };
 
         $(document).ready(function() {
+            //            $.ajax({
+            //                url: "./undecided",
+            //                dataType: 'json',
+            //                success: function(data) {
+            //                    alert("Temperature is: " + );
+            //                },
+            //                error: function() {
+            //                    alert("error");
+            //                }
+            //            });
+            
+            /////////////////////////////////////////
+            /////////////////////////////////////////
 //            $.ajax({
-//                url: "./undecided",
-//                dataType: 'json',
-//                success: function(data) {
-//                    alert("Temperature is: " + );
-//                },
-//                error: function() {
-//                    alert("error");
-//                }
+//                url: "/undecided",
+//                type: 'get',
+//                //data: {objectstate: JSON.stringify(objectstate)}
+//            }).done(function(data) {
+//                console.log('data from server', data)
+//
 //            });
-            $.ajax({
-              url: "./undecided",
-//              type: 'get',
-              //data: {objectstate: JSON.stringify(objectstate)}
-            }).done(function(data) {
-              console.log('data from server', data)
+//////////////////////////////////////////////
+//////////////////////////////////////////////
 
-            });
+            $('#submit').click(
+                function() {
+                    $.ajax({
+                        url: "/formpost?textfield=" + $('#submit').val(),
+                        dataType: 'json',
+                        success: function(data) {
+                            console.log(data);
+                            for (var i = 0; i < data.length; i++) {
+                                $('body').append(data[i]);
+                            }
+                        },
+                        error: function() {
+                            alert("error");
+                        }
+                    });
+                });
         });
 
     </script>
