@@ -17,15 +17,21 @@ app.set('view engine', 'ejs');
 var thesubmissions = [];
 
 app.get('/formpost', function (req, res) {
-//    thesubmissions.push(req.query.textfield);
-//    res.redirect('/undecided');
-    
-    db.undecided.save({"submission":req.query.textfield}, function(err, saved) {
-    if( err || !saved ) console.log("Not saved");
-      else console.log("Saved");
-  });
+    //    thesubmissions.push(req.query.textfield);
+    //    res.redirect('/undecided');
 
-  //res.redirect('/undecided');
+    db.undecided.save({
+        "submission": req.query.textfield
+    }, function (err, saved) {
+        if (err || !saved) {
+            console.log("Not saved")
+        } else {
+            console.log("Saved");
+            res.send(saved);
+        };
+    });
+
+    //res.redirect('/undecided');
 });
 
 //app.get('/undecided', function (req, res) {
@@ -39,30 +45,29 @@ app.get('/formpost', function (req, res) {
 //});
 
 
-app.get('/undecided', function(req, res) {
+app.get('/undecided', function (req, res) {
 
-  db.undecided.find({}, function(err, saved) {
-    if (err || !saved) {
-    	console.log("No results");
-    }
-    else {
-      //console.log(saved);
-        var jj = JSON.stringify(saved);
-        //console.log(saved[1].submission);
-        
-      //res.render('undecided.ejs', {thedata:saved});
+    db.undecided.find({}, function (err, saved) {
+        if (err || !saved) {
+            console.log("No results");
+        } else {
+            //console.log(saved);
+            var jj = JSON.stringify(saved);
+            //console.log(saved[1].submission);
 
-    	// saved.forEach(function(record) {
-      // 	console.log(record);
-    	// });
+            //res.render('undecided.ejs', {thedata:saved});
 
-    	/* Alternatively you could loop through the records with a "for"
+            // saved.forEach(function(record) {
+            // 	console.log(record);
+            // });
+
+            /* Alternatively you could loop through the records with a "for"
     	for (var i = 0; i < saved.length; i++) {
   	  	console.log(saved[i]);
   	}
   	*/
-    }
-  });
+        }
+    });
 
 });
 
