@@ -27,10 +27,17 @@ app.get('/formpost', function (req, res) {
             console.log("Not saved")
         } else {
             console.log("Saved");
-            res.send(saved);
         };
     });
-
+    
+    db.undecided.find({}, function(err, saved){
+        if(err || !saved){
+            console.log("No results");
+        }
+        else{
+            res.send(saved);
+        }
+    });
     //res.redirect('/undecided');
 });
 
